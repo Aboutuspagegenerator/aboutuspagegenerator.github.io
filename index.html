@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online About Us Page Generator for Blogger, WordPress & Shopify</title>
+   <meta name="google-site-verification" content="1maaSlH2VPRpE7hzMsVW_WyiaA5-3ipmbDCc2BhEFEU" />
+   
+    
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Free online about us page generator for Blogger, WordPress, Shopify, Volusion, and news or e-commerce websites. Instantly generate SEO & AI-friendly HTML code.">
+    <meta name="keywords" content="blogger about us page generator, about us page generator for website, about us page generator html, shopify about us page generator, online about us page generator, about us page generator for free, about us page generator volusion, ai about us page generator, create about us page generator, online about us page generator free, about us page generator for news website, about us page generator for wordpress, shopify about us page generator, about us page generator ai, about us page generator for e-commerce website">
+    <meta name="author" content="About Us Page Generator">
+    <link rel="canonical" href="https://aboutuspagegenerator.github.io/">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Free Online About Us Page Generator for Blogs & Websites">
+    <meta property="og:description" content="Create professional About Us HTML code for Blogger, WordPress, Shopify, Volusion, and News websites in seconds for free.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aboutuspagegenerator.github.io/">
+
+    <!-- Schema.org WebApplication Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Free About Us Page Generator",
+      "url": "https://aboutuspagegenerator.github.io/",
+      "description": "An online AI and HTML about us page generator for Blogger, WordPress, Shopify, and e-commerce websites.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How to use this blogger about us page generator for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply enter your business or website details into the form, click Generate, and copy the ready-to-use HTML code directly into your Blogger dashboard under Pages > HTML View."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this about us page generator compatible with Shopify, WordPress, and Volusion?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! The generated HTML output works seamlessly on Shopify, WordPress, Volusion, custom e-commerce stores, and news platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is an About Us page important for news and e-commerce websites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An About Us page establishes trust, transparency, and authoritativeness (E-E-A-T), which is critical for customer conversion, payment gateway approvals, and Google search rankings."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header Section -->
+    <header class="bg-indigo-600 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-2xl">⚡</span>
+                <span class="text-lg md:text-xl font-extrabold tracking-tight">About Us Generator</span>
+            </a>
+
+            <!-- Header Menu -->
+            <nav class="flex items-center space-x-4 md:space-x-6 text-xs md:text-sm font-semibold">
+                <button onclick="openModal('aboutModal')" class="hover:text-indigo-200 transition">About Us</button>
+                <button onclick="openModal('contactModal')" class="hover:text-indigo-200 transition">Contact Us</button>
+                <button onclick="openModal('privacyModal')" class="hover:text-indigo-200 transition">Privacy Policy</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 py-8 space-y-10 w-full">
+
+        <!-- Hero & Generator Tool Box -->
+        <section class="bg-white rounded-3xl shadow-lg border border-slate-200 overflow-hidden">
+            <div class="bg-gradient-to-r from-indigo-600 via-indigo-700 to-violet-800 p-6 md:p-10 text-white text-center">
+                <h1 class="text-3xl md:text-5xl font-extrabold mb-3">AI & HTML About Us Page Generator</h1>
+                <p class="text-indigo-100 text-sm md:text-base max-w-3xl mx-auto">
+                    Create clean, professional, and SEO-optimized About Us pages for Blogger, WordPress, Shopify, Volusion, news websites, and e-commerce stores in seconds.
+                </p>
+            </div>
+
+            <!-- Form & Output Workspace -->
+            <div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Generator Inputs -->
+                <form id="aboutForm" class="space-y-4" onsubmit="generateAboutUs(event)">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1" for="siteName">Website / Store Name *</label>
+                        <input type="text" id="siteName" required placeholder="e.g., TechNews Hub or MyStore" 
+                            class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none transition">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1" for="siteType">Platform Type *</label>
+                            <select id="siteType" class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none transition">
+                                <option value="Blogger Blog">Blogger</option>
+                                <option value="WordPress Site">WordPress</option>
+                                <option value="Shopify Store">Shopify</option>
+                                <option value="Volusion Store">Volusion</option>
+                                <option value="News Website">News Website</option>
+                                <option value="E-commerce Website">E-commerce Website</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1" for="siteCategory">Niche / Category *</label>
+                            <input type="text" id="siteCategory" required placeholder="e.g., Fashion, Tech, News, Health" 
+                                class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none transition">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1" for="siteURL">Website URL *</label>
+                        <input type="url" id="siteURL" required placeholder="e.g., https://example.com" 
+                            class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1" for="contactEmail">Contact Email *</label>
+                        <input type="email" id="contactEmail" required placeholder="e.g., support@example.com" 
+                            class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1" for="siteMission">Mission Statement / Overview</label>
+                        <textarea id="siteMission" rows="3" placeholder="e.g., Delivering accurate daily news updates and unbiased technology reviews." 
+                            class="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 rounded-xl transition shadow-md text-base">
+                        Create About Us Page Now
+                    </button>
+                </form>
+
+                <!-- Output Area -->
+                <div class="flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-bold text-slate-700">Generated Code & Preview:</span>
+                            <div class="space-x-2">
+                                <button onclick="setTab('html')" id="tabHtml" class="text-xs px-3 py-1 rounded-lg bg-indigo-600 text-white font-semibold">HTML View</button>
+                                <button onclick="setTab('text')" id="tabText" class="text-xs px-3 py-1 rounded-lg bg-slate-200 text-slate-700 font-semibold">Visual Preview</button>
+                            </div>
+                        </div>
+
+                        <!-- Textarea / Preview Container -->
+                        <div class="relative">
+                            <textarea id="outputBox" readonly rows="13" placeholder="Your generated About Us page HTML code will appear here..." 
+                                class="w-full p-4 bg-slate-900 text-indigo-300 font-mono text-xs md:text-sm rounded-xl border border-slate-800 focus:outline-none resize-none"></textarea>
+                            <div id="previewBox" class="hidden w-full h-80 p-4 bg-slate-50 text-slate-800 rounded-xl border border-slate-300 overflow-y-auto text-sm leading-relaxed"></div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <button onclick="copyCode()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl transition flex justify-center items-center gap-2 shadow-sm">
+                        <span>📋</span> <span id="copyBtnText">Copy HTML Code</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEO-Optimized Article Section -->
+        <article class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 md:p-10 space-y-8 text-slate-700">
+            <div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-3">
+                    Ultimate Guide to Online About Us Page Generators for Web Creators
+                </h2>
+                <p class="leading-relaxed text-sm md:text-base">
+                    Whether you are building a personal blog on Blogger, an online store on Shopify or Volusion, a publication on a news platform, or a corporate WordPress site, an <strong>about us page generator for website</strong> creation is an essential utility. Using an <strong>online about us page generator free</strong> tool ensures your site establishes high trust, fulfills Google AdSense requirements, and provides key operational details to your visitors.
+                </p>
+            </div>
+
+            <!-- Platform Breakdown Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-2">
+                    <h3 class="font-bold text-indigo-600 text-base">Blogger About Us Page Generator</h3>
+                    <p class="text-xs md:text-sm text-slate-600">
+                        Designed specifically to generate 100% clean HTML that integrates seamlessly into Blogger's HTML page editor without breaking layout styles.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-2">
+                    <h3 class="font-bold text-indigo-600 text-base">Shopify & Volusion Store Generator</h3>
+                    <p class="text-xs md:text-sm text-slate-600">
+                        An <strong>about us page generator shopify</strong> and <strong>about us page generator volusion</strong> tool formatted for e-commerce platforms to satisfy payment gateway guidelines.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-2">
+                    <h3 class="font-bold text-indigo-600 text-base">AI & WordPress Generator</h3>
+                    <p class="text-xs md:text-sm text-slate-600">
+                        Use our <strong>ai about us page generator</strong> to build structured copy for WordPress blocks, custom CMSs, and high-volume news websites.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Detailed How-To Steps -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold text-slate-900">How to Create an About Us Page in 3 Easy Steps</h3>
+                <ol class="list-decimal list-inside space-y-2 text-sm md:text-base">
+                    <li><strong>Enter Details:</strong> Fill in your platform type, site name, URL, contact email, and mission statement into our <strong>create about us page generator</strong> tool.</li>
+                    <li><strong>Generate & Preview:</strong> Click the generate button and test the formatted <strong>about us page generator html</strong> in both raw and visual preview tabs.</li>
+                    <li><strong>Copy & Publish:</strong> Copy the output directly into Blogger, WordPress, Shopify, or Volusion pages.</li>
+                </ol>
+            </div>
+
+            <!-- Comprehensive FAQ Section -->
+            <div class="space-y-4 border-t border-slate-200 pt-6">
+                <h3 class="text-xl font-bold text-slate-900">Frequently Asked Questions (FAQ)</h3>
+                
+                <div class="space-y-4 text-sm md:text-base">
+                    <div class="border-b border-slate-100 pb-3">
+                        <h4 class="font-bold text-slate-800">Q1: Is this about us page generator for free forever?</h4>
+                        <p class="text-slate-600 mt-1">Yes! You can use this <strong>online about us page generator free</strong> of cost with no account registration or hidden charges required.</p>
+                    </div>
+
+                    <div class="border-b border-slate-100 pb-3">
+                        <h4 class="font-bold text-slate-800">Q2: Why do e-commerce and news websites need an About Us page?</h4>
+                        <p class="text-slate-600 mt-1">An <strong>about us page generator for e-commerce website</strong> and <strong>about us page generator for news website</strong> helps satisfy legal, E-E-A-T, and payment processing compliance (such as Stripe, PayPal, and Razorpay).</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-slate-800">Q3: Does the generated HTML work with AI models and search engine crawlers?</h4>
+                        <p class="text-slate-600 mt-1">Yes, the output generated by this <strong>about us page generator ai</strong> tool uses standard semantic HTML tags that make it easy for search engine bots to crawl and index your credentials.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-xs md:text-sm border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 space-y-4">
+            <div class="flex justify-center space-x-6 text-slate-300 font-medium">
+                <button onclick="openModal('aboutModal')" class="hover:text-white transition">About Us</button>
+                <button onclick="openModal('contactModal')" class="hover:text-white transition">Contact Us</button>
+                <button onclick="openModal('privacyModal')" class="hover:text-white transition">Privacy Policy</button>
+            </div>
+            <p>&copy; 2026 Free About Us Page Generator (aboutuspagegenerator.github.io). All rights reserved.</p>
+            <p class="text-slate-500 text-xs">Fast, lightweight, single-page web app built for GitHub Pages deployment.</p>
+        </div>
+    </footer>
+
+    <!-- Modals for Header/Footer Navigation -->
+
+    <!-- About Us Modal -->
+    <div id="aboutModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl relative">
+            <h3 class="text-xl font-bold text-slate-900">About Our Tool</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+                Welcome to <strong>About Us Page Generator</strong>! We provide free, instant, and high-quality generator utilities for webmasters, bloggers, shop owners, and developers worldwide. Our mission is to simplify website creation with clean, SEO-friendly tools.
+            </p>
+            <button onclick="closeModal('aboutModal')" class="w-full bg-indigo-600 text-white font-bold py-2 rounded-xl text-sm">Close</button>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div id="contactModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl relative">
+            <h3 class="text-xl font-bold text-slate-900">Contact Us</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+                Have questions or feedback regarding our About Us Page Generator tool? Feel free to reach out to us:
+            </p>
+            <p class="text-sm font-semibold text-indigo-600">Email: support@aboutuspagegenerator.github.io</p>
+            <button onclick="closeModal('contactModal')" class="w-full bg-indigo-600 text-white font-bold py-2 rounded-xl text-sm">Close</button>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl relative max-h-[80vh] overflow-y-auto">
+            <h3 class="text-xl font-bold text-slate-900">Privacy Policy</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+                Your privacy is important to us. Our website operates completely on client-side JavaScript. We do not store, log, or transmit any details entered into the generator inputs to any external server. All content generation happens entirely within your web browser.
+            </p>
+            <button onclick="closeModal('privacyModal')" class="w-full bg-indigo-600 text-white font-bold py-2 rounded-xl text-sm">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Generator & UI Logic -->
+    <script>
+        let generatedHTML = "";
+        let generatedText = "";
+        let currentMode = "html";
+
+        function generateAboutUs(event) {
+            event.preventDefault();
+
+            const siteName = document.getElementById('siteName').value.trim();
+            const siteType = document.getElementById('siteType').value;
+            const siteCategory = document.getElementById('siteCategory').value.trim();
+            const siteURL = document.getElementById('siteURL').value.trim();
+            const contactEmail = document.getElementById('contactEmail').value.trim();
+            const siteMission = document.getElementById('siteMission').value.trim() || `Delivering reliable resources and high-quality services in the ${siteCategory} domain.`;
+
+            // Automatic SEO Backlink code generated at the bottom of the output
+            generatedHTML = `<h2>About Us - ${siteName}</h2>
+<p>Welcome to <strong>${siteName}</strong>, your trusted <strong>${siteType}</strong> specializing in <strong>${siteCategory}</strong>. We are committed to providing top-notch content, products, and services with a focus on reliability, transparency, and value.</p>
+
+<h3>Our Mission</h3>
+<p>${siteMission}</p>
+
+<h3>Why Choose Us?</h3>
+<p>Founded in 2026, <strong>${siteName}</strong> has built a strong reputation as a dependable ${siteCategory} platform. Whether you are seeking expert insights, high-quality products, or the latest updates, our team works tirelessly to meet your needs.</p>
+
+<h3>Get in Touch</h3>
+<p>We love hearing from our visitors! If you have any questions, feedback, or business inquiries, please reach out to us at <a href="mailto:${contactEmail}">${contactEmail}</a>.</p>
+
+<p>Thank you for visiting <strong>${siteName}</strong>!</p>
+<p>Website: <a href="${siteURL}" target="_blank" rel="noopener">${siteURL}</a></p>
+
+<!-- Powered By Automatic Backlink -->
+<p style="font-size: 12px; color: #777; margin-top: 20px;">Powered by <a href="https://aboutuspagegenerator.github.io/" target="_blank" rel="noopener font-semibold" style="color: #4f46e5; text-decoration: underline;">Free About Us Page Generator</a></p>`;
+
+            generatedText = `About Us - ${siteName}\n\n` +
+                `Welcome to ${siteName}, your trusted ${siteType} specializing in ${siteCategory}.\n\n` +
+                `Our Mission:\n${siteMission}\n\n` +
+                `Get in Touch:\nEmail: ${contactEmail}\nWebsite: ${siteURL}\n\n` +
+                `Powered by Free About Us Page Generator (https://aboutuspagegenerator.github.io/)`;
+
+            updateView();
+        }
+
+        function setTab(mode) {
+            currentMode = mode;
+            const tabHtml = document.getElementById('tabHtml');
+            const tabText = document.getElementById('tabText');
+
+            if (mode === 'html') {
+                tabHtml.className = "text-xs px-3 py-1 rounded-lg bg-indigo-600 text-white font-semibold";
+                tabText.className = "text-xs px-3 py-1 rounded-lg bg-slate-200 text-slate-700 font-semibold";
+            } else {
+                tabText.className = "text-xs px-3 py-1 rounded-lg bg-indigo-600 text-white font-semibold";
+                tabHtml.className = "text-xs px-3 py-1 rounded-lg bg-slate-200 text-slate-700 font-semibold";
+            }
+            updateView();
+        }
+
+        function updateView() {
+            const outputBox = document.getElementById('outputBox');
+            const previewBox = document.getElementById('previewBox');
+
+            if (currentMode === 'html') {
+                outputBox.classList.remove('hidden');
+                previewBox.classList.add('hidden');
+                outputBox.value = generatedHTML || "Click 'Create About Us Page Now' to generate your code...";
+            } else {
+                outputBox.classList.add('hidden');
+                previewBox.classList.remove('hidden');
+                previewBox.innerHTML = generatedHTML || "<em>Visual preview will appear here after code generation...</em>";
+            }
+        }
+
+        function copyCode() {
+            const copyText = currentMode === 'html' ? generatedHTML : generatedText;
+            if (!copyText) return;
+
+            navigator.clipboard.writeText(copyText).then(() => {
+                const copyBtnText = document.getElementById('copyBtnText');
+                copyBtnText.innerText = "Copied to Clipboard! ✓";
+                setTimeout(() => {
+                    copyBtnText.innerText = currentMode === 'html' ? "Copy HTML Code" : "Copy Plain Text";
+                }, 2000);
+            });
+        }
+
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
